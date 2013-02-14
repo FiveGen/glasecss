@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    $Tables
+\*------------------------------------*/
+/**
+ * Basic table structural styling. 
+ * 
+ * Designed and built by @eldelentes and @kurenn  
+ */
+
+@import 'colors';
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+
+  th, td {
+    padding: 10px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    color: #FFF;
+    font-weight: normal;
+  }
+
+  th {
+    background: $primary;
+  }
+
+  td {
+    border-bottom: 1px solid #b2b2b2;
+  }
+
+  td {
+    color: #666;
+  }
+
+}
+
+.table-inverse {
+  th {
+    background: $inverse;
+  }
+}
+
+.table-striped tbody > tr:nth-child(odd) > td {
+  background-color: #f5f5f5;
+}
+
+.table-hover tbody tr:hover > td {
+  background-color: #f5f5f5;
+}
+
+.table-narrow {
+  th {
+    padding: 4px 5px;
+  }
+  td {
+    padding: 4px 5px;
+  }
+}
