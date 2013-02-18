@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    $Text Fields
+\*------------------------------------*/
+/**
+ * Basic text field structural styling. 
+ * 
+ * Designed and built by @eldelentes and @kurenn  
+ */
+
+@import 'compass/css3';
+@import 'colors';
+
+.field {
+  width: 100%;
+  color: #666;
+  padding: 10px;
+  border: 1px solid #ccc; 
+  @include border-radius(6px);
+  font-size: 14px;
+  @include transition-property(all);
+  @include transition-duration(0.15s);
+  @include transition-timing-function(linear);
+
+  &:focus {
+    outline: 3px solid #d4d4d4;
+  }
+}
+
+.field-large {
+  padding: 20px;
+}
+
+.field-primary {
+  border: 3px solid lighten($primary, 20%); 
+
+  &:focus {
+    outline: 3px solid $primary;
+  }
+}
+
+.field-error {
+  border: 3px solid lighten($important, 20%); 
+  color: $important;
+
+  &:focus {
+    outline: 3px solid $important;
+  }
+
+}
