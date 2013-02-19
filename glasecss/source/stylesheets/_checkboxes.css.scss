@@ -28,20 +28,20 @@ input[type=checkbox] {
     overflow: visible;
     padding-left: 30px;
     line-height: 1.5em;
-    
+
     &:before {
-       position: absolute;
-       z-index: 5;
-       content: " ";
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    @include border-radius(4px);
-    border: 2px solid #ccc;
-    background: #FFF;
-    display:block;
-    opacity: 1;
+      position: absolute;
+      z-index: 5;
+      content: " ";
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: 0;
+      @include border-radius(4px);
+      border: 2px solid #ccc;
+      background: #FFF;
+      display:block;
+      opacity: 1;
 
     }
 
@@ -76,4 +76,3 @@ input[type=checkbox] {
     }
   }
 }
-
