@@ -1,0 +1,133 @@
+/*------------------------------------*\
+    $Images
+\*------------------------------------*/
+/**
+ * Basic images structural styling. 
+ * 
+ * Designed and built by @eldelentes and @kurenn  
+ */
+
+@import 'colors';
+@import 'compass/css3';
+
+.img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.img-circular {
+  @include border-radius(50%);
+} 
+
+.img-mask {
+  background: $primary;
+  height: auto;
+  position: relative;
+  display: inline-block;
+
+
+  img {
+    width: inherit;
+  }
+
+  &:hover > img {
+    opacity:.5;
+  }
+
+  &:hover > .img-mask-content {
+    opacity:1;
+  }
+
+  .img-mask-content {
+    opacity: 0;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+  }
+}
+
+.img-mask-animation {
+  background: $primary;
+  height: auto;
+  position: relative;
+  display: inline-block;
+
+
+  img {
+    width: inherit;
+    @include transition(all .1s ease);
+  }
+
+  &:hover > img {
+    opacity:.5;
+  }
+
+  &:hover > .img-mask-content {
+    opacity:1;
+  }
+
+  .img-mask-content-animation {
+    opacity: 0;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+    @include transition(all 4s ease);
+  }
+}
+
+.img-mask-warning {
+  background: $warning;
+}
+
+.img-mask-important {
+  background: $important;
+}
+
+.img-mask-inverse {
+  background: $inverse;
+}
+
+
+.img-mask- {
+  background: $warning;
+}
+
+.img-well {
+  @include border-radius(2%);
+}
+
+.img-selected {
+  @include box-shadow(0px 0px 0px 5px $primary);
+  opacity: .9;  
+}
+
+.img-selected-warning {
+  @include box-shadow(0px 0px 0px 5px $warning);
+  opacity: .9;  
+}
+
+.img-selected-important {
+  @include box-shadow(0px 0px 0px 5px $important);
+  opacity: .9;  
+}
+
+.img-selected-inverse {
+  @include box-shadow(0px 0px 0px 5px $inverse);
+  opacity: .9;  
+}
+
+.img-frame {
+  @include box-shadow(0px 2px 3px 0px #ccc);
+  border:5px solid #fff;
+}
